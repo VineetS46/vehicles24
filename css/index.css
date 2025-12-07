@@ -1,0 +1,52 @@
+/* filepath: c:\xampp\htdocs\Vehicles24\css\index.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0ffff; /* Updated background color */
+}
+
+.hero {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-buttons a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #ccc;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.nav-buttons a:hover {
+  background-color: #bbb;
+}
+
+.vehicle-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.vehicle-card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+  padding: 16px;
+  text-align: center;
+}
+
+.vehicle-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}

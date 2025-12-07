@@ -1,0 +1,64 @@
+# junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Application uploads
+upload/
+
+# Logs
+*.log
+logs/
+
+# Docker and Container data
+deployment/mysql-data/
+deployment/mysql/
+deployment/tmp/
+deployment/logs/
+
+# Terraform state 
+**/.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+override.tf
+override.tf.json
+*.tfvars
+*.auto.tfvars
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# System keys
+*.pem
+*.ppk
+*.crt
+*.key
+
+# Backups and temp files
+*.bak
+*.tmp
+temp/
+cache/
+
+
+
+git init
+
+
+git add .
+
+
+git commit -m "Initial commit: Vehicles24 Dockerized app"
+
+
+git branch -M main
+
+
+git remote add origin git@github.com:VineetS46/vehicles24.git
+
+git push -u origin main

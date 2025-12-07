@@ -1,0 +1,44 @@
+services:
+  # PHP-FPM service (runs your PHP code)
+  php:
+    image: php:8.2-fpm-alpine              # Lightweight PHP with FPM
+    working_dir: /var/www/html             # Code directory inside container
+
+   
+    command: >
+      sh -c "docker-php-ext-install mysqli pdo pdo_mysql &&
+             php-fpm"
+
+    volumes:
+      - ../:/var/www/html                  # Mount project root into container
+
+  # Nginx web server (handles HTTP requests)
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"                          
+    volumes:
+      - ../:/var/www/html                  # Same code as PHP
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf  # Our Nginx config
+
+    depends_on:
+      - php                                # Start PHP before Nginx
+      - mysql                              # Ensure DB is up too
+
+  # MySQL database server
+  mysql:
+    image: mysql:8.0
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root123         
+      MYSQL_DATABASE: vehicles24           
+      MYSQL_USER: vehicles24_user          
+      MYSQL_PASSWORD: vehicles24_pass      
+
+    
+    # PHP talks to MySQL over Docker network using host "mysql".
+
+    volumes:
+      - ./mysql-data:/var/lib/mysql        # Persist DB data
+      - ../vehicle.sql:/docker-entrypoint-initdb.d/vehicle.sql # Auto-import schema on first run

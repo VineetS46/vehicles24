@@ -1,0 +1,64 @@
+/* ...existing code... */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eaffff; /* Add this line */
+}
+
+.hero {
+    text-align: left;
+    margin-top: 50px;
+  }
+  
+  .nav-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .nav-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 16px;
+    background-color: #ccc;
+    /* color: #333; */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .nav-buttons a:hover {
+    background-color: #bbb;
+  }
+form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form select, form input[type="text"], form button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
