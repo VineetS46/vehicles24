@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
         $row['state'] = decrypt($row['state']);
         $row['fuel_type'] = decrypt($row['fuel_type']);
         $row['year'] = intval(decrypt($row['year']));
-        $row['mileage'] = floatval(decrypt($row['mileage']));
+        // $row['mileage'] = floatval(decrypt($row['mileage']));
         $row['price'] = floatval(decrypt($row['price']));
         $row['vehicle_number'] = decrypt($row['vehicle_number']);
         $row['color'] = decrypt($row['color']);

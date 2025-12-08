@@ -80,7 +80,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card vehicle-card h-100" style="border: 1px solid #e3e6f0; border-radius: 12px; overflow: hidden; transition: all 0.3s ease;">
                         <div class="position-relative">
-                            <img src="../upload/${vehicle.image}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="${vehicle.year} ${vehicle.make} ${vehicle.model}">
+                            <img src="/upload/${vehicle.image}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="${vehicle.year} ${vehicle.make} ${vehicle.model}">
                             <div class="position-absolute top-0 end-0 m-2">
                                 <span class="badge bg-success px-2 py-1" style="font-size: 0.75rem;">${vehicle.status.toUpperCase()}</span>
                             </div>

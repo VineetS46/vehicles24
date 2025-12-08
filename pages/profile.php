@@ -192,7 +192,7 @@ if (!isset($_SESSION['user_id'])) {
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="../upload/${vehicle.image}" class="img-fluid rounded-start vehicle-image" style="height: 160px; object-fit: cover; width: 100%;">
+                            <img src="/upload/${vehicle.image}" class="img-fluid rounded-start vehicle-image" style="height: 160px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">

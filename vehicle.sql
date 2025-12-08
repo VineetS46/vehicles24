@@ -25,6 +25,7 @@ CREATE TABLE sell_vehicles (
     vehicle_number VARCHAR(255) NOT NULL,
     color VARCHAR(255) NOT NULL,
     kms_driven VARCHAR(255) NOT NULL,
+    mileage VARCHAR(255) NOT NULL,
     condition_rating VARCHAR(255) NOT NULL,
     gear_type VARCHAR(255) NOT NULL,
     owners VARCHAR(255) NOT NULL,
@@ -61,6 +62,3 @@ CREATE TABLE scrap_vehicles (
     FOREIGN KEY (user_id) REFERENCES tb_user(id) ON DELETE CASCADE
 );
 
--- Insert sample data
-INSERT INTO tb_user (fullname, username, email, phonenumber, password) VALUES
-('John Doe', 'johndoe', 'john@example.com', '1234567890', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi');

@@ -23,6 +23,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql 
       - /opt/app/vehicle.sql:/docker-entrypoint-initdb.d/vehicle.sql:ro
+      - /opt/app/deployment/uploads:/var/www/html/upload
       
 
 volumes:

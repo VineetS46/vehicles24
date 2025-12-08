@@ -51,15 +51,18 @@ if (!in_array($file_type, $allowed_types)) {
     exit();
 }
 
-// Generate unique filename
+
 $file_extension = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
 $unique_filename = uniqid() . '_' . time() . '.' . $file_extension;
-$upload_path = '../../upload/' . $unique_filename;
+
+$upload_dir = '/var/www/html/upload/';
+$upload_path = $upload_dir . $unique_filename;
 
 if (!move_uploaded_file($_FILES['image']['tmp_name'], $upload_path)) {
     echo json_encode(['success' => false, 'message' => 'Failed to save image']);
     exit();
 }
+
 
 // Insert into database
 $conn = getDatabaseConnection();
