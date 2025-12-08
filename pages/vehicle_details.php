@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id'])) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="buy.php">vehicles24</a>
+            <a class="navbar-brand" href="buy.php">VEHICLES24</a>
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="buy.php">Browse</a>
                 <a class="nav-link" href="sell.php">Sell</a>

@@ -20,8 +20,8 @@ variable "key_name" {
 }
 
 /*
-These two are currently unused if we use the default VPC.
-You can keep them for future custom VPC work.
+ unused for now  default VPC.
+ future custom VPC work.
 */
 variable "vpc_cidr" {
   description = "CIDR for a custom VPC (unused in default VPC setup)"

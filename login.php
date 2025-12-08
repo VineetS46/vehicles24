@@ -2,7 +2,7 @@
 require_once 'config.php';
 
 if (isLoggedIn()) {
-    header('Location: pages/buy.html');
+    header('Location: pages/buy.php');
     exit();
 }
 

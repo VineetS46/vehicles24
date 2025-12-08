@@ -52,10 +52,10 @@ $a = (isset($_POST['pass']) ? $_POST['pass'] : '');
 
 $b = (isset($_POST['email']) ? $_POST['email'] : '');
 
-$host="localhost";
-$user="vinit";
-$pass="Vinit_46";
-$db="vehicle";
+$host     = 'mysql';                 // MySQL container service name
+    $username = 'vehicles24_user';  
+    $password = 'vehicles24_pass';
+    $database = 'vehicles24';
 
 $x=mysqli_connect($host,$user,$pass,$db);
 
