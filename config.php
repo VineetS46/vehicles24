@@ -6,6 +6,10 @@ function getDatabaseConnection() {
     $username = 'vehicles24_user';  
     $password = 'vehicles24_pass';
     $database = 'vehicles24';
+    // $host     = 'localhost';       
+    // $username = 'root';            
+    // $password = '';                
+    // $database = 'vehicle';      
 
     $conn = new mysqli($host, $username, $password, $database);
 

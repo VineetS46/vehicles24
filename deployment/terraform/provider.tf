@@ -1,6 +1,5 @@
-# Tells Terraform to use AWS and which region to talk to.
-# Credentials will be taken from your local AWS config:
 
+# Sets up Terraform + AWS + random provider.
 
 terraform {
   required_version = ">= 1.5.0"
@@ -10,9 +9,13 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 5.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
+    }
   }
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = var.aws_region
 }
